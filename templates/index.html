@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;   /* horizontal center */
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hi Welcome to Sign up page</h1>
+    <p>Today is {{ day_of_week }}</p>
+
+    <div class="form-container">
+        <form action="/submit" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your full name">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password">
+
+            <input type="submit" value="Sign up",method="POST">
+        </form>
+    </div>
+</body>
+</html>
